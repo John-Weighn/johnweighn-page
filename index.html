@@ -55,6 +55,7 @@
 
     <main>
       <section>
+        <!-- 1. 網頁架構圖 -->
         <div class="card" id="about">
           <h2>1. 網頁架構圖（簡述）</h2>
           <ul>
@@ -70,13 +71,20 @@
           </div>
         </div>
 
+        <!-- 2. 依照架構圖設計 HTML & CSS -->
+        <div class="card" style="margin-top:18px">
+          <h2>2. 依照架構圖使用 HTML、CSS 設計網頁 ✅</h2>
+          <p>本網頁依據上方架構圖設計，包含 Header、Main、Aside、Footer 四大區塊，使用 HTML5 與 CSS 進行版面排版與風格設定。</p>
+        </div>
+
+        <!-- 3. 嵌入影片 & 照片 -->
         <div class="card" id="media" style="margin-top:18px">
-          <h2>3. 嵌入影片</h2>
+          <h2>3. 嵌入影片與照片 ✅</h2>
+          <h3>影片</h3>
           <div class="video-wrapper">
             <iframe src="https://www.youtube.com/embed/s9Mfo0JmCJQ" title="影片" allowfullscreen></iframe>
           </div>
-
-          <h2 style="margin-top:16px">3. 嵌入照片</h2>
+          <h3 style="margin-top:16px">照片 / GIF</h3>
           <div class="gallery">
             <img src="IMG_1878.GIF" alt="GIF1">
             <img src="IMG_1367.JPG" alt="照片1">
@@ -85,17 +93,32 @@
           </div>
         </div>
 
+        <!-- 4. 使用 JS 做統計圖表 -->
         <div class="card" id="stats" style="margin-top:18px">
-          <h2>4. 使用 JavaScript 做出統計圖表</h2>
+          <h2>4. 使用 JavaScript 做出統計圖表 ✅</h2>
           <div class="chart-container">
             <canvas id="myChart"></canvas>
           </div>
         </div>
+
+        <!-- 5. 設計響應式網站 -->
+        <div class="card" style="margin-top:18px">
+          <h2>5. 設計響應式網站 ✅</h2>
+          <p>本網頁採用 <code>@media (max-width:800px)</code> 響應式設計，當螢幕寬度變窄時會自動調整排版為單欄模式，圖片與導覽列也會自動縮放。</p>
+        </div>
+
+        <!-- 6. 上架網站 -->
+        <div class="card" style="margin-top:18px">
+          <h2>6. 把設計的網頁上架到網站中 ✅</h2>
+          <p>本作品已上傳並成功部署至 <strong>GitHub Pages</strong> 平台，可透過公開網址進行瀏覽與分享。</p>
+        </div>
+
       </section>
 
+      <!-- 7. 同學網站連結 -->
       <aside>
         <div class="card">
-          <h2 id="links">7. 同學網站（超連結）</h2>
+          <h2 id="links">7. 同學網站（超連結） ✅</h2>
           <div class="links">
             <a href="https://example.com/classmate1" target="_blank" rel="noopener">同學A 的網站</a>
             <a href="https://example.com/classmate2" target="_blank" rel="noopener">同學B 的網站</a>
@@ -106,7 +129,7 @@
     </main>
 
     <footer class="card" style="margin-top:18px">
-      <div>© 2025 施銘泰 - 網際網路作業 | 已上架於 GitHub Pages</div>
+      <div>© 2025 施銘泰 - 網際網路作業 | 已上架於 GitHub Pages ✅</div>
     </footer>
   </div>
 
@@ -123,7 +146,15 @@
         borderColor: 'rgba(11,116,222,0.9)'
       }]
     };
-    const config = { type: 'bar', data: data, options: { responsive:true, maintainAspectRatio:false, scales:{ y:{ beginAtZero:true } } } };
+    const config = { 
+      type: 'bar', 
+      data: data, 
+      options: { 
+        responsive:true, 
+        maintainAspectRatio:false, 
+        scales:{ y:{ beginAtZero:true } } 
+      } 
+    };
     window.addEventListener('DOMContentLoaded', ()=>{
       const ctx = document.getElementById('myChart').getContext('2d');
       new Chart(ctx, config);
